@@ -26,6 +26,41 @@ Vue.use(MintUi);
 //vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource);
+//Vue.http.options.root ='http://xxxxxx';//请求根路径，注意：后面接口地址前面不需要/
+
+
+//过滤器调用的格式 {{ name | 过滤器名称 }}
+//过滤器的定义语法
+//全局过滤器===>Vue.filter('过滤器的名称',function(){});
+// Vue.filter('dateFormat',function (time,pattern='YYYY-MM-DD HH:mm:ss') {
+//     //根据传入的时间格式化
+//     const  date = new Date(time);
+//     const year = date.getFullYear();
+//     const month = (date.getMonth()+1).toString().padStart(2,'0');//从0开始,保留两位自动补0
+//     //const day = date.getDay();//星期
+//     const day = (date.getDate()).toString().padStart(2,'0');//日期,保留两位自动补0
+//     //return year+'-'+month+'-'+day;
+//     //模板字符串
+//     // return `${year}-${month}-${day}`;
+//
+//     if(pattern && pattern.toLowerCase()==='yyyy-mm-dd'){
+//         //模板字符串
+//         return `${year}-${month}-${day}`;
+//     }else{
+//         const hour = (date.getHours()).toString().padStart(2,'0');//保留两位自动补0
+//         const min = (date.getMinutes()).toString().padStart(2,'0');//保留两位自动补0
+//         const sec = (date.getSeconds()).toString().padStart(2,'0');//保留两位自动补0
+//
+//         //模板字符串
+//         return `${year}-${month}-${day}  ${hour}:${min}:${sec}`;
+//     }
+// });
+
+
+import moment from 'moment'
+Vue.filter('dateFormat',function (time,pattern='YYYY-MM-DD HH:mm:ss') {
+    return moment(time).format(pattern);
+});
 
 
 new Vue({

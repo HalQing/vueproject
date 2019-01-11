@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "dependencies": {
     "mint-ui": "^2.2.13",
+    "moment": "^2.23.0",
     "url-loader": "^1.1.2",
     "vue": "^2.5.21",
     "vue-resource": "^1.5.1",
