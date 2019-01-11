@@ -7,6 +7,7 @@
     "mint-ui": "^2.2.13",
     "url-loader": "^1.1.2",
     "vue": "^2.5.21",
+    "vue-resource": "^1.5.1",
     "webpack-dev-server": "^3.1.14",
     "y": "^0.3.2"
   },

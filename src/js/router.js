@@ -6,6 +6,11 @@ import goods from '../views/goods.vue'
 import login from '../views/login.vue'
 import register from '../views/register.vue'
 
+import home from '../views/home.vue'
+import member from '../views/member.vue'
+import cart from '../views/cart.vue'
+import search from '../views/search.vue'
+
 //创建路由对象
 const router =  new VueRouter({
     routes:[
@@ -19,7 +24,13 @@ const router =  new VueRouter({
 
         },
         {path:'/goods',component:goods},
+        {path:'/',redirect:'/home'},//重定向
+        {path:'/home',component:home},
+        {path:'/member',component:member},
+        {path:'/cart',component:cart},
+        {path:'/search',component:search},
     ],
+    linkActiveClass:'mui-active',//设置切换时覆盖高亮的类：router-link-active，改用mui-active
 });
 
 export default router; //供外部调用

@@ -20,7 +20,12 @@ import 'mint-ui/lib/style.css'
 import 'bootstrap/dist/css/bootstrap.css'
 //mui
 import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 Vue.use(MintUi);
+
+//vue-resource
+import VueResource from 'vue-resource'
+Vue.use(VueResource);
 
 
 new Vue({
